@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> listSongs = new ArrayList<String>();
     static ArrayList<Integer> randomNum = new ArrayList<Integer>();
     ArrayAdapter<String> adapter;
+    public static final String KEY_MSG1 = "com.example.dina.msg1";
 
 
     @Override
@@ -100,5 +102,11 @@ public class MainActivity extends AppCompatActivity {
     public void onStop() {
         saveArray();
         super.onStop();
+    }
+
+    public void showList(View view) {
+        Intent i = new Intent(this, Main2Activity.class);
+        i.putExtra(KEY_MSG1, listSongs);
+        startActivity(i);
     }
 }

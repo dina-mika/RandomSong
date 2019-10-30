@@ -39,8 +39,9 @@
         android:ems="10"
         android:hint="Введите название песни, которую хотите добавить"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRandomSong"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRandomSong" />
 
     <Button
         android:id="@+id/buttonAdd"
@@ -53,5 +54,17 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAddSong" />
+
+    <Button
+        android:id="@+id/buttonShowList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:onClick="showList"
+        android:text="Список песен"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
